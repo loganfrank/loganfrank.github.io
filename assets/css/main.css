@@ -10,6 +10,17 @@
 
 /* Reset */
 
+	my-email::after {
+		font-family: Arial;
+		color: #bb0000;
+		content: attr(data-domain);
+	}
+	my-email::before {
+		font-family: Arial;
+		color: #bb0000;
+		content: attr(data-user) " [at] ";
+	}
+
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
@@ -1633,12 +1644,14 @@
 		}
 
 	a {
+		font-family: Arial;
 		color: #bb0000;
-		text-decoration: underline;
+		text-decoration:  none;
 	}
 
 		a:hover {
 			text-decoration: none;
+			color: #800000;
 		}
 
 	strong, b {
@@ -2709,6 +2722,14 @@
 
 		}
 
+		.white-box {
+			position: fixed;
+			background-color: white;
+			top: 0px;
+			width: 100%;
+			height: 0.2em;
+		}
+
 /* Header */
 
 	.subpage {
@@ -2716,10 +2737,13 @@
 	}
 
 		.subpage #header {
-			background: #bb0000;
+			background: linear-gradient(#3D3D3D, #262626);
+			border-bottom: 0.2em solid #bb0000;
+			border-top: 0.15em solid #bb0000;
+			margin-top: 0.2em;
 			top: 0;
-			height: 44px;
-			line-height: 44px;
+			height: 46px;
+			line-height: 46px;
 			position: fixed;
 		}
 
@@ -2742,7 +2766,21 @@
 		}
 
 		#header .logo {
-			color: #ffffff;
+			color: #000000;
+			display: inline-block;
+			font-weight: 600;
+			height: inherit;
+			left: 0;
+			line-height: inherit;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			font-size: 1em;
+		}
+
+		.subpage #header .logo {
+			color: whitesmoke;
 			display: inline-block;
 			font-weight: 600;
 			height: inherit;
@@ -2762,13 +2800,25 @@
 			transition: color 0.2s ease-in-out;
 			display: inline-block;
 			padding: 0 0.75em;
-			color: inherit;
+			color: #000000;
+			text-decoration: none;
+			font-size: .8em;
+		}
+
+		.subpage #header a {
+			-moz-transition: color 0.2s ease-in-out;
+			-webkit-transition: color 0.2s ease-in-out;
+			-ms-transition: color 0.2s ease-in-out;
+			transition: color 0.2s ease-in-out;
+			display: inline-block;
+			padding: 0 0.75em;
+			color: whitesmoke;
 			text-decoration: none;
 			font-size: .8em;
 		}
 
 			#header a:hover {
-				color: #ffffff;
+				color: #A9A9A9;
 			}
 
 			#header a:last-child {
@@ -3029,7 +3079,7 @@
 
 			#footer .copyright a:hover {
 				color: #bbb;
-				text-decoration: underline;
+				text-decoration: none;
 			}
 
 	#footer ul.icons li .icon {
