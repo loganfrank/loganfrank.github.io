@@ -1,75 +1,952 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Logan Frank</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" href="images/osu.png" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="main-page">
-			<header id="header">
-				<div class="inner">
-					<a href="index.html" class="logo">Logan Frank</a>
-					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="research/research.html">Research</a>
-						<a href="cv/cv.html">C.V.</a>
-						<a href="teaching/teaching.html">Teaching</a>
-						<a href="other/other.html">Other</a>
-					</nav>
-					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-				</div>
-			</header>
+<!DOCTYPE html>
+<html lang="en">
 
-			<section id="banner">
-				<h1>Logan Frank</h1>
-				<p>PhD Student @ Ohio State University</p>
-			</section>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logan Frank</title>
 
-			<section id="three" class="wrapper">
-				<div class="inner">
-					<img src="images/face.png" alt="Head Shot" width="25%" height="25%" style="border-radius: 50%; float: right; margin-left: 7%; margin-bottom: 12%; margin-top: -2%;" />
-					<p>
-						Email: <my-email data-user="frank [dot] 580" data-domain="osu [dot] edu"></my-email> <br>
-						LinkedIn: <a href="https://www.linkedin.com/in/loganfrank" style>https://www.linkedin.com/in/loganfrank</a> <br>
-						GitHub: <a href="https://www.github.com/loganfrank">https://www.github.com/loganfrank</a> <br>
-						Google Scholar: <a href="https://scholar.google.com/citations?user=--1OGZUAAAAJ&hl=en">https://scholar.google.com/citations?user=--1OGZUAAAAJ&hl=en</a> <br>
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/osu.png" type="image/x-icon">
 
-					</p>
-					<p> I am a final year PhD student in the <a href="https://cse.osu.edu/">Department of Computer Science and Engineering</a> at <a href="https://www.osu.edu/"> Ohio State University</a> working in the <a href="https://github.com/osu-cvl">Computer Vision Laboratory</a> under <a href="http://web.cse.ohio-state.edu/~davis.1719/">Dr. Jim Davis</a>. My dissertation topic is in the area of low-resource deep learning for vision-related tasks.</p>
-					<p> Previously I have been funded by the Air Force Research Laboratory Sensors Directorate (RYAT). Additionally, I have worked with the Department of Food, Agricultural, and Biological Engineering at Ohio State.</p>
-					<br>
-					<h3>News:</h3>
-					<p style="font-family: Arial;">
-						11/2023: This summer I will be interning with General Electric (GE) Aerospace Research under Dr. Paul Ardis! <br>
-						10/2023: 1 paper, <a href="https://arxiv.org/pdf/2310.13782.pdf">"Data-Free Knowledge Distillation Using Adversarially Perturbed OpenGL Shader Images"</a>, uploaded to arXiv <br>
-						05/2023: This summer I will be interning with the Air Force Research Laboratory under Dr. Christopher Liberatore! <br>
-						07/2022: 1 paper, <a href="https://arxiv.org/pdf/2110.13989.pdf">"Revisiting Batch Norm Initialization"</a>, accepted to ECCV 2022! (28.4% Acceptance) <br>
-						10/2021: 1 paper, <a href="https://arxiv.org/pdf/2110.13989.pdf">"Revisiting Batch Normalization"</a>, uploaded to arXiv <br>
-						09/2020: I passed my qualification exams! <br>
-            			08/2020: 1 paper, <a href="https://openaccess.thecvf.com/content/WACV2021/papers/Frank_Confidence-Driven_Hierarchical_Classification_of_Cultivated_Plant_Stresses_WACV_2021_paper.pdf">"Confidence-Driven Hierarchical Classification of Cultivated Plant Stresses"</a>, accepted to WACV 2021! (35.4% Acceptance)
-					</p>
-				</div>
-			</section>
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-			<footer id="footer">
-				<div class="inner">
-					<div class="flex">
-						<ul class="icons">
-							<li><a href="https://www.github.com/loganfrank" class="icon fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.linkedin.com/in/loganfrank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://scholar.google.com/citations?user=--1OGZUAAAAJ&hl=en" class="icon fa-google"><span class="label">Google Scholar</span></a></li>
-							<li><a href="https://twitter.com/__loganfrank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						</ul>
-					</div>
-				</div>
-			</footer>
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
 
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<body>
 
-	</body>
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/face.png" alt="Logan Frank" width="80" style="border-radius: 5%">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Logan Frank">Logan Frank</h1>
+
+          <p class="title">CV/ML PhD Student</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Info</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+
+              <!-- <a href="mailto:richard@example.com" class="contact-link">frank [dot] 580 [at] osu [dot] edu </a> -->
+              <my-email data-user="frank [dot] 580" data-domain="osu [dot] edu"></my-email>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title"><a href="https://www.linkedin.com/in/loganfrank/" class="contact-link">LinkedIn</a></p>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title"><a href="https://github.com/loganfrank" class="contact-link">GitHub</a></p>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-google"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title"><a href="https://scholar.google.com/citations?user=--1OGZUAAAAJ&hl=en" class="contact-link">Google Scholar</a></p>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <address>Columbus, Ohio, USA</address>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <p style="color:rgb(133, 133, 133); font-size: 10px;">Updated: November 2024</p>
+      </div>
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>Home</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Research</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Teaching</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!--
+        - #HOME
+      -->
+
+      <article class="home  active" data-page="home">
+
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+
+        <section class="home-text">
+          <p>
+            I am a final year PhD student in the <a href="https://cse.osu.edu/" style="display: inline;">Department of Computer Science and Engineering</a> at <a href="https://www.osu.edu/" style="display: inline;"> Ohio State University</a> working in the <a href="https://github.com/osu-cvl" style="display: inline;">Computer Vision Laboratory</a> under <a href="https://cse.osu.edu/people/davis.1719" style="display: inline;">Prof. Jim Davis</a>.
+          </p>
+
+          <p>
+            My dissertation specifically focuses on the student learning process in knowledge distillation. Additionally, my research interests include data-scarcity, generalization & robustness, and confidence calibration in deep learning for vision-related tasks.
+          </p>
+
+          <p>
+            Currently I work as a Graduate Teaching Associate for the CSE2221 Software Components 1 course. Previously I have been funded by the Air Force Research Laboratory Sensors Directorate (RYAT). At the beginning of my PhD I collaborated with the Department of Food, Agriculture, and Biological Engineering at Ohio State.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+        <section class="service">
+
+          <h3 class="h3 service-title">Current Positions</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/osu2.png" alt="OSU Logo" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">PhD Student</h4>
+
+                <p class="service-item-text">
+                  Advisor: Prof. Jim Davis <br>
+                  Dissertation: Knowledge Distillation
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/ge.png" alt="GE Logo" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">CV Research Intern</h4>
+
+                <p class="service-item-text">
+                  Returning summer intern in the AI & CV group at GE Aerospace
+                </p>
+              </div>
+
+            </li>
+          </ul>
+
+        </section>
+
+        <!--
+          - News
+        -->
+        <section class="news">
+
+          <h3 class="h3">News</h3>
+          <br>
+
+          <ul style="font-size: 12px;">
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;">11/2024:</p> 1 paper, <a href="https://arxiv.org/abs/2411.12817" style="display: inline;">"What Makes a Good Dataset for Knowledge Distillation?"</a>, uploaded to arXiv
+            </li>
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;">10/2024:</p> Gave an invited talk on <a href="https://arxiv.org/pdf/2310.13782.pdf" style="display: inline;">"Data-Free Knowledge Distillation Using Adversarially Perturbed OpenGL Shader Images"</a> to <a href="https://www.clarifai.com/" style="display: inline;">Clairfai</a>
+            </li>
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;">10/2024:</p> This upcoming summer I will be returning as a CV Research Intern with GE Aerospace under Dr. Paul Ardis
+            </li>
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;">05/2024:</p> This summer I will be working as a CV Research Intern with GE Aerospace under Dr. Paul Ardis
+            </li>
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;">10/2023:</p> 1 paper, <a href="https://arxiv.org/pdf/2310.13782.pdf" style="display: inline;">"Data-Free Knowledge Distillation Using Adversarially Perturbed OpenGL Shader Images"</a>, uploaded to arXiv
+            </li>
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;">05/2023:</p> This summer I will be interning with the Air Force Research Laboratory under Dr. Christopher Liberatore
+            </li>
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;">07/2022:</p> 1 paper, <a href="https://arxiv.org/pdf/2110.13989.pdf" style="display: inline;">"Revisiting Batch Norm Initialization"</a>, accepted to ECCV 2022
+            </li>
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;">10/2021:</p> 1 paper, <a href="https://arxiv.org/pdf/2110.13989.pdf" style="display: inline;">"Revisiting Batch Norm Initialization"</a>, uploaded to arXiv
+            </li>
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;">09/2020:</p> I passed my qualification exams!
+            </li>
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;">08/2020:</p> 1 paper, <a href="https://openaccess.thecvf.com/content/WACV2021/papers/Frank_Confidence-Driven_Hierarchical_Classification_of_Cultivated_Plant_Stresses_WACV_2021_paper.pdf" style="display: inline;">"Confidence-Driven Hierarchical Classification of Cultivated Plant Stresses"</a>, accepted to WACV 2021
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!--
+        - #RESEARCH
+      -->
+
+      <article class="resume" data-page="research">
+
+        <header>
+          <h2 class="h2 article-title">Research</h2>
+        </header>
+
+        <!-- Publications -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Publications</h3>
+          </div>
+          <div>
+            <!-- Paper 1 -->
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <p class="timeline-text">
+                  "Revisiting Batch Norm Initialization"<br>
+                  J. Davis, <b>L. Frank</b> <br>
+                  European Conference on Computer Vision (ECCV), October 2022 <br>
+                </p>
+                <div>
+                  <a href="https://arxiv.org/pdf/2110.13989" style="display: inline;">[PDF]</a>
+                  <a href="https://github.com/osu-cvl/revisiting-bn-init" style="display: inline;">[Code]</a>
+                  <a href="assets/videos/6138_video.mp4" style="display: inline;">[Video]</a>
+                  <a href="assets/posters/6138_poster.pdf" style="display: inline;">[Poster]</a>
+                </div>
+              </li>
+
+              <!-- Paper 2 -->
+              <li class="timeline-item">
+                <p class="timeline-text">
+                  "Confidence-Driven Hierarchical Classification of Cultivated Plant Stresses"<br>
+                  <b>L. Frank</b>, C. Wiegman, J. Davis, S. Shearer <br>
+                  IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), January 2021 <br>
+                </p>
+                <div>
+                  <a href="assets/papers/confidence-driven_hierarchical_classification_of_cultivated_plant_stresses.pdf" style="display: inline;">[PDF]</a>
+                  <a href="https://github.com/osu-cvl/agriculture" style="display: inline;">[Code]</a>
+                  <a href="assets/videos/0191_video.mp4" style="display: inline;">[Video]</a>
+                  <a href="assets/slides/0191_slides.pdf" style="display: inline;">[Slides]</a>
+                </div>
+              </li>
+
+              <!-- Paper 3 -->
+              <li class="timeline-item">
+                <p class="timeline-text">
+                  "A Framework for Explainable Deep Neural Models Using External Knowledge Graphs"<br>
+                  Z. Daniels, <b>L. Frank</b>, C. Menart, M. Raymer, P. Hitzler <br>
+                  SPIE Defense and Commercial Sensing, April 2020 <br>
+                </p>
+                <div>
+                  <a href="assets/papers/a_framework_for_explainable_deep_neural_models_using_external_knowledge_graphs.pdf" style="display: inline;">[PDF]</a>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Preprints -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Preprints / In Submission</h3>
+          </div>
+          <div>
+            <!-- Paper 1 -->
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <p class="timeline-text">
+                  "What Makes a Good Dataset for Knowledge Distillation?"<br>
+                  <b>L. Frank</b>, J. Davis <br>
+                  arXiv:2411.12817 [cs.CV], November 2024 <br>
+                </p>
+                <div>
+                  <a href="https://arxiv.org/pdf/2411.12817" style="display: inline;">[PDF]</a>
+                </div>
+              </li>
+
+              <!-- Paper 2 -->
+              <li class="timeline-item">
+                <p class="timeline-text">
+                  "Deep Learning Improvements for Sparse Spatial Field Reconstruction"<br>
+                  R. Sunderhaft, <b>L. Frank</b>, J. Davis <br>
+                  arXiv:2408.1253 [cs.CV], August 2024 <br>
+                </p>
+                <div>
+                  <a href="https://arxiv.org/pdf/2408.12531" style="display: inline;">[PDF]</a>
+                </div>
+              </li>
+
+              <!-- Paper 3 -->
+              <li class="timeline-item">
+                <p class="timeline-text">
+                  "Data-Free Knowledge Distillation Using Adversarially Perturbed OpenGL Shader Images"<br>
+                  <b>L. Frank</b>, J. Davis <br>
+                  arXiv:2310.13782 [cs.CV], October 2023 <br>
+                </p>
+                <div>
+                  <a href="https://arxiv.org/pdf/2310.13782" style="display: inline;">[PDF]</a>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+      </article>
+
+
+
+      <!--
+        - #RESUME
+      -->
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <!-- Education -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- PhD -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Ohio State University - PhD in Computer Science & Engineering</h4>
+
+              <span>Present</span>
+
+              <p class="timeline-text">
+                Advisor: Prof. Jim Davis <br>
+                Dissertation: "Improving the Student Learning Process in Knowledge Distillation"
+              </p>
+
+            </li>
+
+            <!-- MS -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Ohio State University - MS in Computer Science & Engineering</h4>
+
+              <span>Spring 2025</span>
+
+              <p class="timeline-text">
+                Advisor: Prof. Jim Davis <br>
+                Obtained through completion of PhD Candidacy Exam
+              </p>
+
+            </li>
+
+            <!-- BS -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Wright State University - BS in Computer Engineering</h4>
+
+              <span>Fall 2019</span>
+
+              <p class="timeline-text">
+                Overall GPA: 3.88/4.00
+              </p>
+
+            </li>
+          </ol>
+
+        </section>
+
+        <!-- Experience -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- GRA / GTA -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Graduate Research/Teaching Associate - Ohio State University</h4>
+
+              <span>Fall 2019 - Present</span>
+
+              <p class="timeline-text">
+                GRA: Computer Vision Laboratory <br>
+                GTA: CSE2221 Software Components 1
+              </p>
+
+            </li>
+
+            <!-- GE #2 -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">CV Research Intern - GE Aerospace Research</h4>
+
+              <span>May 2025 - August 2025</span>
+
+              <p class="timeline-text">
+                Manager: Dr. Paul Ardis <br>
+                Project: TBD
+              </p>
+
+            </li>
+
+            <!-- GE #1 -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">CV Research Intern - GE Aerospace Research</h4>
+
+              <span>May 2024 - August 2024</span>
+
+              <p class="timeline-text">
+                Manager: Dr. Paul Ardis <br>
+                Project: Multi-Modal Object Re-Identification
+              </p>
+
+            </li>
+
+            <!-- AFRL w/ Chris Liberatore -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Graduate Research Intern - Air Force Research Laboratory</h4>
+
+              <span>May 2023 - August 2023</span>
+
+              <p class="timeline-text">
+                Mentor: Dr. Christopher Liberatore (RYAT) <br>
+                Project: Exploring Methods for Long-Tailed Image Classification
+              </p>
+
+            </li>
+
+            <!-- AFRL w/ Chris Menart -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Graduate Research Intern - Air Force Research Laboratory</h4>
+
+              <span>May 2019 - August 2019</span>
+
+              <p class="timeline-text">
+                Mentor: Mr. Christopher Menart (RYAT) <br>
+                Project: Utilizing Knowledge Graphs for Explainable Neural Networks
+              </p>
+
+            </li>
+
+            <!-- Wright State SMART -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Undergraduate Research Assistant - Wright State University</h4>
+
+              <span>May 2019 - August 2019</span>
+
+              <p class="timeline-text">
+                PI: Dr. Yong Pei <br>
+                Project: Small Object Detetion System for Autonomous Aircraft
+              </p>
+
+            </li>
+
+            <!-- AFRL w/ Ashley DeMange -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Undergraduate Research Intern - Air Force Research Laboratory</h4>
+
+              <span>May 2018 - August 2018</span>
+
+              <p class="timeline-text">
+                Mentor: Ms. Ashley DeMange (RYDR) <br>
+                Project: Assessing Spiking Neural Network Performance on FPGAs
+              </p>
+
+            </li>
+
+            <!-- Marketo -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Quality Assurance Intern - Marketo Inc. (now Adobe)</h4>
+
+              <span>June 2017 - August 2017</span>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Selected Publications -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Selected Publications</h3>
+          </div>
+
+          <!-- Dissertation #1 -->
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <p class="timeline-text">
+                "What Makes a Good Dataset for Knowledge Distillation?"<br>
+                <b>L. Frank</b>, J. Davis <br>
+                arXiv:2411.12817 [cs.CV], November 2024 <br>
+              </p>
+              <div>
+                <a href="https://arxiv.org/pdf/2411.12817" style="display: inline;">[PDF]</a>
+              </div>
+            </li>
+
+            <!-- Revisiting Batch Norm Initialization -->
+            <li class="timeline-item">
+              <p class="timeline-text">
+                "Revisiting Batch Norm Initialization"<br>
+                J. Davis, <b>L. Frank</b> <br>
+                European Conference on Computer Vision (ECCV), October 2022 <br>
+              </p>
+              <div>
+                <a href="https://arxiv.org/pdf/2110.13989" style="display: inline;">[PDF]</a>
+                <a href="https://github.com/osu-cvl/revisiting-bn-init" style="display: inline;">[Code]</a>
+                <a href="assets/videos/6138_video.mp4" style="display: inline;">[Video]</a>
+                <a href="assets/posters/6138_poster.pdf" style="display: inline;">[Poster]</a>
+              </div>
+            </li>
+
+            <!-- Hierarchy -->
+            <li class="timeline-item">
+              <p class="timeline-text">
+                "Confidence-Driven Hierarchical Classification of Cultivated Plant Stresses"<br>
+                <b>L. Frank</b>, C. Wiegman, J. Davis, S. Shearer <br>
+                IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), January 2021 <br>
+              </p>
+              <div>
+                <a href="assets/papers/confidence-driven_hierarchical_classification_of_cultivated_plant_stresses.pdf" style="display: inline;">[PDF]</a>
+                <a href="https://github.com/osu-cvl/agriculture" style="display: inline;">[Code]</a>
+                <a href="assets/videos/0191_video.mp4" style="display: inline;">[Video]</a>
+                <a href="assets/slides/0191_slides.pdf" style="display: inline;">[Slides]</a>
+              </div>
+            </li>
+          </ol>
+
+        </section>
+
+        <!-- Invited Talks -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="mic-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Invited Talks</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- Clarifai -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Clarifai</h4>
+
+              <span>October 2024</span>
+
+              <p class="timeline-text">
+                Data-Free Knowledge Distillation Using Adversarially Perturbed OpenGL Shader Images
+              </p>
+
+            </li>
+          </ol>
+
+        </section>
+
+        <!-- Awards -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="medal-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Awards</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- SMART -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">SMART Scholarship Recipient - U.S. Department of Defense</h4>
+
+              <span>April 2019</span>
+
+            </li>
+          </ol>
+
+        </section>
+
+        <!-- Professional Service -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="ribbon-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Professional Service</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- Reviewer -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Reviewer</h4>
+
+              <p class="timeline-text">
+                <p style="font-family: 'Courier New', Courier, monospace; display: inline;">CVPR:</p> 2025, 2024, 2023, 2022 <br>
+                <p style="font-family: 'Courier New', Courier, monospace; display: inline;">ECCV:</p> 2024, 2022 <br>
+                <p style="font-family: 'Courier New', Courier, monospace; display: inline;">ICCV:</p> 2023 <br>
+                <p style="font-family: 'Courier New', Courier, monospace; display: inline;">WACV:</p> 2024
+              </p>
+            </li>
+
+            <!-- Mentored Students -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Mentored Students</h4>
+
+              <p class="timeline-text">
+                Robert Sunderhaft (BS Data Analytics): Spring 2023 - Spring 2024 <br>
+                Christopher Cosma (BS CSE): Spring 2022 - Spring 2023
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Teaching -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="library-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Teaching</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- Reviewer -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">CSE2221: Software Components 1</h4>
+
+              <span>Fall 2019 - Spring 2020, Fall 2023 - Present</span>
+
+              <p class="timeline-text">
+                Introductory software engineering course for undergraduate Computer Science & Engineering, Computer & Information Science, Data Analytics, and Electrical Engineering-Computer Engineering students
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Other -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="globe-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Other</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- Swimming -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">NCAA Division 1 Athlete, Swimming - Wright State University</h4>
+
+              <span>August 2015 - June 2017</span>
+            </li>
+
+          </ol>
+
+        </section>
+        
+
+      </article>
+
+
+      <!--
+        - #TEACHING
+      -->
+      <article class="blog" data-page="teaching">
+
+        <header>
+          <h2 class="h2 article-title">Teaching</h2>
+        </header>
+
+        <!--
+          - News
+        -->
+
+        <section class="news">
+
+          <p>
+            These are some things I wrote during my first semester teaching CSE2221. Before reading my project instructions, read the original ones from the CSE2221 schedule. Only use mine as supplemental. I am not responsible for you losing points. <br><br>
+            My friend Skylar also still has some of his CSE2221 material up on his website <a href="https://skywolf829.github.io/CSE2221/" style="display: inline;">here</a>. <br><br>
+            Last thing: you can get old exams from an official OSU service by filling out the <a href="https://skywolf829.github.io/CSE2221/" style="display: inline;">OSU ODI Study and Review Materials Request Form</a> (which as far as I know is not academic misconduct).
+          </p>
+          <br>
+
+          <ul style="font-size: 16px;">
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/project1.pdf" style="display: inline;">Project 1</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/project2.pdf" style="display: inline;">Project 2</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/project3.pdf" style="display: inline;">Project 3</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/project4.pdf" style="display: inline;">Project 4</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/project5.pdf" style="display: inline;">Project 5</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/project6.pdf" style="display: inline;">Project 6</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/project7.pdf" style="display: inline;">Project 7</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/project8.pdf" style="display: inline;">Project 8</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/project9.pdf" style="display: inline;">Project 9</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/project10.pdf" style="display: inline;">Project 10</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/project11.pdf" style="display: inline;">Project 11</a></p>
+            </li>
+
+          </ul>
+
+          <p>
+            <br>Additionally, here is so exam prep for Midterm 1 and 2 (no I do not have anything for the final). You can find a complementary Midterm 1 study guide and Midterm 2 practice exam on Skylar's website.
+          </p>
+          <br>
+
+          <ul style="font-size: 16px;">
+
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/sampleMidterm1.pdf" style="display: inline;">Sample Midterm 1</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/sampleMidterm1Key.pdf" style="display: inline;">Sample Midterm 1 Answers</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/midterm2study.pdf" style="display: inline;">Midterm 2 Study Guide</a></p>
+            </li>
+            <li class="news-item">
+              <p style="font-family: 'Courier New', Courier, monospace; display: inline;"><a href="assets/teaching/midterm2studykey.pdf" style="display: inline;">Midterm 2 Study Guide Answers</a></p>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+      -->
+
+    </div>
+
+  </main>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
 </html>
